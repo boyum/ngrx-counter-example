@@ -1,11 +1,9 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
-import {StoreModule} from '@ngrx/store';
-import {CounterComponent} from './app.component';
-import {counterReducer} from './app.reducers';
-import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import { BrowserModule } from '@angular/platform-browser';
+import { CounterComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 @NgModule({
   declarations: [
@@ -15,8 +13,6 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
     BrowserModule,
     FormsModule,
     HttpModule,
-
-    StoreModule.provideStore({counter: counterReducer}),
 
     StoreDevtoolsModule.instrumentOnlyWithExtension({
       maxAge: 10

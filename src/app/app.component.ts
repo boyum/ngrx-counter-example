@@ -1,7 +1,4 @@
-import {Component} from "@angular/core";
-import {Store} from "@ngrx/store";
-import {Observable} from "rxjs/Observable";
-import {INCREMENT, DECREMENT, RESET} from './app.reducers';
+import { Component } from "@angular/core";
 
 @Component({
   selector: 'counter',
@@ -15,21 +12,17 @@ import {INCREMENT, DECREMENT, RESET} from './app.reducers';
     `
 })
 export class CounterComponent {
-  counter$: Observable<number>;
 
-  constructor(private store: Store<number>) {
-    this.counter$ = this.store.select<number>('counter')
+  constructor() {
+
   }
 
   increment() {
-    this.store.dispatch({type: 'INCREMENT'});
   }
 
   decrement() {
-    this.store.dispatch({type: 'DECREMENT'});
   }
 
   reset() {
-    this.store.dispatch({type: 'RESET'});
   }
 }
